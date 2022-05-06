@@ -55,11 +55,11 @@ public class FractalExplorer {
                 int iteration = fractal.numIterations(xCoord, yCoord);
 
                 if (iteration == -1){
-                    display.drawPixel(x, y, 0);
+                    display.drawPixel(x, y, 36);
                 }
 
                 else {
-                    float hue = 0.6f + (float) iteration / 200f;
+                    float hue = 0.4f + (float) iteration / 300f;
                     int rgbColor = Color.HSBtoRGB(hue, 1f, 1f);
                     display.drawPixel(x, y, rgbColor);
                 }

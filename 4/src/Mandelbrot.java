@@ -21,8 +21,10 @@ public class Mandelbrot extends FractalGenerator {
         double imaginary = 0;
 
         while (iterator < MAX_ITERATIONS && real * real + imaginary * imaginary < 4) {
-            real = real * real - imaginary * imaginary + x;
-            imaginary = 2 * real * imaginary + y;
+            double newReal = real * real - imaginary * imaginary + x;
+            double newImaginary = 2 * real * imaginary + y;
+            real = newReal;
+            imaginary = newImaginary;
             iterator++;
         }
 
